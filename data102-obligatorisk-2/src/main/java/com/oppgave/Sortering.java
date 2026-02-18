@@ -1,5 +1,4 @@
-package Oppgave2;
-
+package com.oppgave;
 
 public class Sortering{
     public static void innstikkSortering(Integer[] a){
@@ -13,6 +12,7 @@ public class Sortering{
             a[j+1]=key;
         }
     }
+
     public static void utvalgSortering(Integer[]a){
         for(int i = 0; i <a.length -1; i++){
             int minIndeks = i;
@@ -26,6 +26,7 @@ public class Sortering{
             a[minIndeks] = tmp;
         }
     }
+
     public static void raskSortering(Integer[] a){
         raskSortering(a, 0, a.length - 1);
     }
@@ -51,6 +52,7 @@ public class Sortering{
         a[right] = tmp;
         return i + 1;
     }
+
     public static void mergeSort(Integer[] a){
         if (a.length <= 1) return;
         Integer[] aux = new Integer[a.length];
@@ -78,6 +80,7 @@ public class Sortering{
         while (i<=mid) a[k++] = aux[i++];
 
     }
+    
     public static boolean erSortert(Integer[] a){
         for (int i = 1;i<a.length; i++){
             if (a[i - 1] > a[i]) return false;

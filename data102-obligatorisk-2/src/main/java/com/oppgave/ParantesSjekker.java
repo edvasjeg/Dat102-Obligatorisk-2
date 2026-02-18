@@ -1,10 +1,12 @@
+package com.oppgave;
+
+
 import java.util.Stack;
 
 public class ParantesSjekker<T> {
     public boolean sjekkParantes(String s) {
 
         Stack<Character> stabel = new Stack<>();
-
 
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);

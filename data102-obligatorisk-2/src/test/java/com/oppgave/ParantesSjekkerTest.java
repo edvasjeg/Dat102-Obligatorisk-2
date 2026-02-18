@@ -1,6 +1,7 @@
+package com.oppgave;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
 
 class ParantesSjekkerTest {
     private final ParantesSjekker<?> sjekker = new ParantesSjekker<>();
@@ -29,6 +30,7 @@ class ParantesSjekkerTest {
         System.out.println("Hello World!");
         assertTrue(sjekker.sjekkParantes(program));
         """;
+        assertFalse(sjekker.sjekkParantes(program));
     }
 
 }
