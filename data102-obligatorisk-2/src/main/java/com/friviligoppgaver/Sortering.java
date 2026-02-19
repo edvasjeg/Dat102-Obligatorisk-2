@@ -1,4 +1,4 @@
-package com.oppgave;
+package com.friviligoppgaver;
 
 public class Sortering{
     public static void innstikkSortering(Integer[] a){

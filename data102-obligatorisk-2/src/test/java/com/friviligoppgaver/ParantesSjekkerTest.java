@@ -1,6 +1,7 @@
-package com.oppgave;
+package com.friviligoppgaver;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ParantesSjekkerTest {

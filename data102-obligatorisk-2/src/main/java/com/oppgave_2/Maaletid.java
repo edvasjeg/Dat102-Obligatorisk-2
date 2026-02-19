@@ -1,16 +1,18 @@
-package com.oppgave;
+package com.oppgave_2;
 
 import java.util.Random;
 
+import com.friviligoppgaver.Sortering;
+
 public class Maaletid {
-    static Integer[] lagTilfeldig(int n, long seed){
+    public static Integer[] lagTilfeldig(int n, long seed){
         Random r = new Random(seed);
         Integer[]a = new Integer[n];
         for (int i = 0; i<n; i++) a[i] = r.nextInt();
         return a;
     }
 
-    static long maal(Runnable jobb, int antall){
+    public static long maal(Runnable jobb, int antall){
         long start = System.nanoTime();
         for (int i = 0; i<antall; i++) jobb.run();
         long slutt = System.nanoTime();
