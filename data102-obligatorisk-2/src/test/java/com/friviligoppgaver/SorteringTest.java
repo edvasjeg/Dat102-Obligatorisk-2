@@ -1,10 +1,12 @@
-package com.friviligoppgaver;
+package test.java.com.friviligoppgaver;
+import main.java.com.friviligoppgaver.Sortering;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.Random;
 import java.util.Arrays;
 
+import static main.java.com.friviligoppgaver.Sortering.innstikkSortering;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SorteringTest {
@@ -39,7 +41,7 @@ class SorteringTest {
         Arrays.sort(fasit);
 
         Integer[] a1= original.clone();
-        Sortering.innstikkSortering(a1);
+        innstikkSortering(a1);
         assertArrayEquals(fasit,a1);
 
         Integer[] a2= original.clone();

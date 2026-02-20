@@ -1,4 +1,4 @@
-package com.friviligoppgaver;
+package main.java.com.friviligoppgaver;
 
 
 import java.util.Stack;

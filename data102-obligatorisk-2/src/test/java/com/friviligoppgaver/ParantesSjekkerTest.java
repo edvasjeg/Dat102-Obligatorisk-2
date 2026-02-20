@@ -1,5 +1,6 @@
-package com.friviligoppgaver;
+package test.java.com.friviligoppgaver;
 
+import main.java.com.friviligoppgaver.ParantesSjekker;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

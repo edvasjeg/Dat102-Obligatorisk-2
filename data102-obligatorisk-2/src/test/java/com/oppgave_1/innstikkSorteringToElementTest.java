@@ -1,5 +1,6 @@
-package com.oppgave_1;
+package test.java.com.oppgave_1;
 
+import main.java.com.oppgave_1.InnstikkSortering;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

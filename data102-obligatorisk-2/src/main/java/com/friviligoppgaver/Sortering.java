@@ -1,4 +1,4 @@
-package com.friviligoppgaver;
+package main.java.com.friviligoppgaver;
 
 public class Sortering{
     public static void innstikkSortering(Integer[] a){
@@ -27,30 +27,37 @@ public class Sortering{
         }
     }
 
-    public static void raskSortering(Integer[] a){
-        raskSortering(a, 0, a.length - 1);
+    public static void raskSortering(Integer[] a) {
+        raskSortering3(a, 0, a.length - 1);
     }
-    private static void raskSortering(Integer[] a, int left, int right){
+    private static void raskSortering3(Integer[] a,int left,int right) {
         if (left >= right) return;
-        int p = partition(a, left, right);
-        raskSortering(a,left,p-1);
-        raskSortering(a,p+1, right);
-    }
-    private static int partition(Integer[] a, int left, int right){
-        Integer pivot = a [right];
-        int i = left - 1;
-        for(int j = left; j < right; j++){
-            if(a[j]<=pivot){
+
+        Integer pivot = a[left +(right - left) / 2];
+        int lt = left;
+        int i  = left;
+        int gt = right;
+
+        while (i <= gt) {
+            int cmp= Integer.compare(a[i], pivot);
+            if (cmp < 0) {
+                swap(a, lt, i);
+                lt++; i++;
+            } else if (cmp > 0) {
+                swap(a, i, gt);
+                gt--;
+            } else {
                 i++;
-                Integer tmp = a[i];
-                a[i] = a[j];
-                a[j] = tmp;
             }
         }
-        Integer tmp = a[i + 1];
-        a[i + 1] = a [right];
-        a[right] = tmp;
-        return i + 1;
+        raskSortering3(a,left, lt - 1);
+        raskSortering3(a,gt +1, right);
+    }
+
+    private static void swap(Integer[] a, int i, int j) {
+        Integer tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
     }
 
     public static void mergeSort(Integer[] a){

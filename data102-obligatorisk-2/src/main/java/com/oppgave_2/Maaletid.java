@@ -1,8 +1,10 @@
-package com.oppgave_2;
+package main.java.com.oppgave_2;
+
+import main.java.com.friviligoppgaver.Sortering;
 
 import java.util.Random;
 
-import com.friviligoppgaver.Sortering;
+import static main.java.com.oppgave_2.MaaletidLike.lagLike;
 
 public class Maaletid {
     public static Integer[] lagTilfeldig(int n, long seed){
@@ -48,5 +50,18 @@ public class Maaletid {
             long teori = Math.round(c*fNlogN(n));
             System.out.println(n + "\t"+antall + "\t" + t + "\t" + teori);
         }
+        System.out.println("");
+        System.out.println("Resultat av RaskSortering (Alle elementer like)");
+        System.out.println("N\tmålinger\tmålt(ns)");
+
+        for (int n : N){
+            long t = maal(()->{
+                Integer[] a = lagLike(n, 7);
+                Sortering.raskSortering(a);
+            }, antall);
+            System.out.println(n + "\t"+antall+"\t\t"+t);
+        }
+
+
     }
 }

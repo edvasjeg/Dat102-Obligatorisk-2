@@ -1,6 +1,8 @@
-package com.oppgave_1;
+package main.java.com.oppgave_1;
+import main.java.com.oppgave_1.InnstikkSortering;
 
-import com.oppgave_2.Maaletid;
+
+import main.java.com.oppgave_2.Maaletid;
 
 public class Main {
     
